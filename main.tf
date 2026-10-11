@@ -1,0 +1,7 @@
+data "oci_data_safe_security_policy_deployment_security_policy_entry_state" "data_safe_security_policy_deployment_security_policy_entry_state_lookup" {
+  for_each = var.data_safe_security_policy_deployment_security_policy_entry_state_lookup
+
+  security_policy_deployment_id  = each.value.security_policy_deployment_id
+  security_policy_entry_state_id = each.value.security_policy_entry_state_id
+}
+
